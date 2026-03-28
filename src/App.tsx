@@ -13,19 +13,27 @@ import { Scene } from "./components/Scene";
 
 function App() {
   return (
+    // if we use the orthographic camera the size of the object lock same
     <>
-      {/* changing soe Canvas Setting */}
-      {/* 1. camera */}
       <Canvas
-      // camera={{
-      //   fov: 45,
-      //   near: 0.1,
-      //   far: 100,
-      //   position: [2, 2, 5],
-      // }}
+        // orthographic
+        gl={{
+          // if we do this antialias false we can the steps
+          // on edges
+          antialias: false,
+          // when the alpha property is true the background will be transparent
+          // otherwise if we turn it into false the background color are going to black
+          alpha: true,
+        }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 100,
+          // for using orthographic we need zoom property
+          // zoom: 127,
+          position: [2, 3, 4],
+        }}
       >
-        {/* so now we do some dynamic thing in that we use some external component that return 
-        one scene  */}
         <Scene />
       </Canvas>
     </>
