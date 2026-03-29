@@ -1,38 +1,16 @@
 import { OrbitControls } from "@react-three/drei";
-import { Custom } from "./Custome";
+import { ThreeDModel } from "./ThreeDModel";
 
 export const Scene = () => {
   return (
     <>
       <OrbitControls />
-      {/* this way we add the axes helper in any where in object but they must be children one */}
-      {/* this is way we increase the length of the axes using args property*/}
-      {/* <axesHelper args={[3]} /> */}
-      {/* and this is an grid helper that is use for checking the bonder of visible project */}
-      {/* 
-        args are
-        1. size  -> 20
-        2. division -> 20
-        3. color center line -> red
-        4. grid color -> cyan
-      
-      */}
-      {/* <gridHelper args={[20, 20, "red", "cyan"]} /> */}
-      <mesh position={[0, 0, -10]}>
-        <boxGeometry />
-        <meshNormalMaterial />
-      </mesh>
-
-      <mesh>
-        <boxGeometry />
-        <meshNormalMaterial />
-      </mesh>
-
-      <Custom />
+      <ThreeDModel />
     </>
   );
 };
 
+// ****************************************************************
 // important one
 // create Custom Geometry see Custom component
 
@@ -109,6 +87,7 @@ export const Scene = () => {
 //   );
 // };
 
+// ****************************************************************
 // // important things 1....
 // // {/* <mesh>
 // //   {/* by changing the dimension of any geometry we use args property and then in
@@ -125,3 +104,69 @@ export const Scene = () => {
 // //       then there is simple direct property are define over there like this */}
 // //   <meshBasicMaterial color="red" wireframe={true} />
 // // </mesh> */}
+
+// ****************************************************************
+// Scenes
+
+// {/* this way we add the axes helper in any where in object but they must be children one */}
+//       {/* this is way we increase the length of the axes using args property*/}
+//       {/* <axesHelper args={[3]} /> */}
+//       {/* and this is an grid helper that is use for checking the bonder of visible project */}
+//       {/*
+//         args are
+//         1. size  -> 20
+//         2. division -> 20
+//         3. color center line -> red
+//         4. grid color -> cyan
+
+//       */}
+//       {/* <gridHelper args={[20, 20, "red", "cyan"]} /> */}
+//       <mesh position={[0, 0, -10]}>
+//         <boxGeometry />
+//         <meshNormalMaterial />
+//       </mesh>
+
+//       <mesh>
+//         <boxGeometry />
+//         <meshNormalMaterial />
+//       </mesh>
+
+//       <Custom />
+
+// ****************************************************************
+// useLoader use
+
+//  // this is how we use useLoader class and we need texture
+//   // so that we get from THREE.TextureLoader
+//   // and 2nd argument is image path when we do ./ we are in public folder
+//   // then we access the inside folder and image
+//   const texture = useLoader(THREE.TextureLoader, "./img/simpleImg.png");
+
+//   return (
+//     <>
+//       <OrbitControls />
+//       {/* useLoader from three that help to add texture on material */}
+//       <mesh>
+//         <planeGeometry args={[4, 4]} />
+//         {/* once you get image in texture variable the map with material */}
+//         <meshBasicMaterial side={THREE.DoubleSide} map={texture} />
+//       </mesh>
+//     </>
+//   );
+
+// ****************************************************************
+// Particles
+// for that see the Particles container
+// import this and read the inside docs for understanding what is particles
+
+// {
+//   /* <Particle /> */
+// }
+
+// ****************************************************************
+// now loading the 3d model in Scene that is the one of the most important thing we are
+// doing here
+
+// see the ThreeDModel container
+// that container contain all the imp things that
+// is use for loading 3d model in Scene

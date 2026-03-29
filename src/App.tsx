@@ -20,18 +20,18 @@ function App() {
         gl={{
           // if we do this antialias false we can the steps
           // on edges
-          antialias: false,
+          antialias: true,
           // when the alpha property is true the background will be transparent
           // otherwise if we turn it into false the background color are going to black
           alpha: true,
         }}
         camera={{
-          fov: 45,
+          fov: 75,
           near: 0.1,
           far: 100,
           // for using orthographic we need zoom property
           // zoom: 127,
-          position: [2, 3, 4],
+          // position: [2, 3, 4],
         }}
       >
         <Scene />
