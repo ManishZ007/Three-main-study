@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./components/Scene";
+import { Perf } from "r3f-perf";
 
 // create geometry
 // then create material
@@ -35,6 +36,10 @@ function App() {
         }}
       >
         <Scene />
+
+        {/* use this after all the Scenes */}
+        {/* you can change the position of the panel using position attribute */}
+        <Perf position="top-left" />
       </Canvas>
     </>
   );

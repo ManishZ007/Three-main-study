@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 
-import { BikeModel } from "./Models/Bike";
+// import { BikeModel } from "./Models/Bike";
+import { DogModel } from "./Models/dogModel";
 
 export const ThreeDModel = () => {
   return (
@@ -15,8 +16,9 @@ export const ThreeDModel = () => {
           </mesh>
         }
       >
-        {/* <DogModel /> */}
-        <BikeModel scale={0.95} position={[-0.5, 0.75, 0]} />
+        {/* <BikeModel scale={0.95} position={[-0.5, 0.75, 0]} /> */}
+
+        <DogModel />
       </Suspense>
     </>
   );
@@ -67,3 +69,10 @@ export const ThreeDModel = () => {
 // Adv:-
 // by doing this way we targeting the mesh individually and doing different operation on that
 // go to the BikeModel and see what i did
+
+// now imp thing how to display the model animation using dogModel
+// if you want to check is any model contain the animation or not
+// just console.log() that model and i that object you can see there is one animation key that
+// contain all the animation you want
+
+// for understanding go to the DogModel and see the code and learn
