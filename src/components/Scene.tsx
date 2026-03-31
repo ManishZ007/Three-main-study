@@ -1,11 +1,11 @@
 import { OrbitControls } from "@react-three/drei";
-import { ThreeDModel } from "./ThreeDModel";
+import { LevaExample } from "./LevaExample";
 
 export const Scene = () => {
   return (
     <>
       <OrbitControls />
-      <ThreeDModel />
+      <LevaExample />
     </>
   );
 };
@@ -170,3 +170,16 @@ export const Scene = () => {
 // see the ThreeDModel container
 // that container contain all the imp things that
 // is use for loading 3d model in Scene
+
+// ****************************************************************
+
+// Debug
+// is the one top-right side table that contain the mesh property
+// and with the help of that we change the property of that mesh and find the exact that one
+// property we need
+// so there we use leva that perfectly work with the react-three-fiber
+// for using and understanding go to the github repo leva and is all the thing
+// how to install and
+// how to read and how to use
+// so we use leva
+// to check and understand import the LevaExample and check that component
