@@ -1,11 +1,14 @@
 import { OrbitControls } from "@react-three/drei";
-import { LevaExample } from "./LevaExample";
+// import { LevaExample } from "./LevaExample";
+// import { BikeModel } from "./Models/Bike";
+import { ThreeDModel } from "./ThreeDModel";
 
 export const Scene = () => {
   return (
     <>
       <OrbitControls />
-      <LevaExample />
+      {/* <LevaExample /> */}
+      <ThreeDModel />
     </>
   );
 };

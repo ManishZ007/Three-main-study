@@ -1,4 +1,5 @@
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { useEffect } from "react";
 // import { useEffect } from "react";
 // import { useLoader } from "@react-three/fiber";
 // import { GLTFLoader } from "three/examples/jsm/Addons.js";
@@ -21,9 +22,9 @@ export const DogModel = () => {
   // that we get from console.log of animation
   // in this case we use Idle and .play() method that use to play the animation
   // and this animation runs in loop
-  // useEffect(() => {
-  //   animation.actions.Hide?.play();
-  // }, []);
+  useEffect(() => {
+    animation.actions.Show?.play();
+  }, []);
 
   // when you use the 3d model and to some animation so takes some gpu power
   // so the monitoring that we use one library that show stats about gpu

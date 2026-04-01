@@ -1,7 +1,7 @@
 import { useControls } from "leva";
 
 export const LevaExample = () => {
-  const levaControls = useControls({
+  const levaControls = useControls("Box Geometry", {
     XPosition: {
       value: 0,
       min: -10,
@@ -29,3 +29,5 @@ export const LevaExample = () => {
 // steps :- how the increase by that provided value
 
 // and look how we use that in attribute of mesh
+
+// we can also use folder that handle different mesh for that we need to give the 1st argument as a name of the folder
