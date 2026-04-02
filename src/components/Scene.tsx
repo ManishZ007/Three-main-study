@@ -1,14 +1,14 @@
 import { OrbitControls } from "@react-three/drei";
+import { MouseUse } from "./MouseUse";
 // import { LevaExample } from "./LevaExample";
 // import { BikeModel } from "./Models/Bike";
-import { ThreeDModel } from "./ThreeDModel";
+// import { ThreeDModel } from "./ThreeDModel";
 
 export const Scene = () => {
   return (
     <>
       <OrbitControls />
-      {/* <LevaExample /> */}
-      <ThreeDModel />
+      <MouseUse />
     </>
   );
 };
@@ -186,3 +186,14 @@ export const Scene = () => {
 // how to read and how to use
 // so we use leva
 // to check and understand import the LevaExample and check that component
+
+// ****************************************************************
+// Event
+// Event that trigger when we do something like mouse event when we
+// click something the onClick thing this is way there are multiple mouse event that we use in this three session
+
+// for getting more information go to the docs.pmndr.rs there you find multiple thinks that will help you to build the better ui
+
+// in three js you need to know about raycasting but in this react-three-fiber when you
+//  using the events the raycasting is automatically implemented
+// to see this inner concept go to the MouseUse.tsx file in components
